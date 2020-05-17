@@ -61,19 +61,12 @@ start.onclick=function()
 		function myFunction(v)
 		{
 			v.setAttribute("class", "flip-card-again");
-			// v.setAttribute("style","position: relative");
-			// v.setAttribute("style","width: 100%");
-			// v.setAttribute("style","height: 100%");
-			// v.setAttribute("style","text-align: center");
-			// v.setAttribute("style","transition: transform 0.8s");
-			// v.setAttribute("style","transform-style: preserve-3d");
-			// v.setAttribute("style","transform: rotateY(180deg)");
 		}
 		
 		left.onclick=function()
 		{
 			myFunction(left);
-			if(m_check===0&&r_check===0)
+			if(m_check===0&&r_check===0&&l_check==0)
 			{
 				if(l===random)
 				{
@@ -96,7 +89,7 @@ start.onclick=function()
 		middle.onclick=function()
 		{
 			myFunction(middle); 
-			if(l_check===0&&r_check===0)
+			if(m_check===0&&r_check===0&&l_check==0)
 			{
 				if(m===random)
 				{
@@ -118,7 +111,7 @@ start.onclick=function()
 		right.onclick=function()
 		{
 			myFunction(right);
-			if(m_check===0&&l_check===0)
+			if(m_check===0&&r_check===0&&l_check==0)
 			{
 				if(r===random)
 				{
@@ -136,11 +129,9 @@ start.onclick=function()
 			}
 		}
 		start.innerHTML="ATTEMPT AGAIN"
-		var total= c+w;
+		var total= c+w+1;
 		attempt.innerHTML="ATTEMPTS: "+ total + "/10";
 	}
-	start.innerHTML="ATTEMPT AGAIN"
-		var total= c+w;
-		attempt.innerHTML="ATTEMPTS: "+ total + "/10";
+
 }
 	
