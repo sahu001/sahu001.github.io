@@ -15,7 +15,7 @@ start.onclick=function()
 	left.setAttribute("style","border:0px solid #5cb85c");
 	middle.setAttribute("style","border:0px solid #5cb85c");
 	right.setAttribute("style","border:0px solid #5cb85c");
-	if(c+w>=10)
+	if(c+w>=9)
 	{
 		if(c<=3)
 			center.innerHTML="Bad Luck";
@@ -136,9 +136,11 @@ start.onclick=function()
 			}
 		}
 		start.innerHTML="ATTEMPT AGAIN"
-		var total= c+w+1;
+		var total= c+w;
 		attempt.innerHTML="ATTEMPTS: "+ total + "/10";
 	}
-
+	start.innerHTML="ATTEMPT AGAIN"
+		var total= c+w+1;
+		attempt.innerHTML="ATTEMPTS: "+ total + "/10";
 }
 	
